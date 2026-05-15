@@ -4,13 +4,16 @@ import {
   Delete,
   Get,
   Param,
+  ParseIntPipe,
   Post,
   Put,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 
 import { UsersService } from './users.service';
 import { CreateUserDTO } from './dto/create-users.dto';
+import { AuthGuard } from './guards/auth.guards';
 
 @Controller({
   path: '/users',
@@ -29,8 +32,9 @@ export class UsersController {
   }
 
   @Get('/:id')
-  getUserByID(@Param('id') id: string) {
-    return this.usersService.getUserByID(Number(id));
+  @UseGuards(AuthGuard)
+  getUserByID(@Param('id', ParseIntPipe) id: number) {
+    return this.usersService.getUserByID(id);
   }
 
   @Post()
