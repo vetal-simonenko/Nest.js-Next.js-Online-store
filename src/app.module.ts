@@ -1,6 +1,4 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerMiddleware } from './users/middleware/logger.middleware';
@@ -19,8 +17,8 @@ import { LoggerMiddleware } from './users/middleware/logger.middleware';
       synchronize: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
