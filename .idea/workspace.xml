@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1937a61-3ae7-4aed-a1a1-50d613db07dc" name="Changes" comment="Commit message">
-      <change afterPath="$PROJECT_DIR$/server/src/auth/decorators/auth.decorators.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/auth/guards/jwt-auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/auth/strategies/google.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/user/decorators/user.decorator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/auth/strategies/jwt.strategies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/strategies/jwt.strategies.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/user/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/user/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +37,9 @@
     &quot;accountId&quot;: &quot;b59e729f-3e3a-47f2-a416-9ecfbd084f7f&quot;
   }
 }</component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
   </component>
@@ -68,6 +62,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "node.js.detected.package.eslint": "true",
@@ -92,34 +87,6 @@
       <visibility group="yarn" flag="true" />
     </myKeys>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationStatuses">
-      <map>
-        <entry key="HttpClient.HttpRequestRunConfigurationType">
-          <value>
-            <map>
-              <entry key="api | #1" value="STOPPED" />
-              <entry key="api | Send POST request with body as parameters" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="RunManager" selected="HTTP Request.api | Send POST request with body as parameters">
-    <configuration name="api | Send POST request with body as parameters" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/server/api.http" executionIdentifier="Send POST request with body as parameters" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/server/api.http" executionIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.api | Send POST request with body as parameters" />
-        <item itemvalue="HTTP Request.api | #1" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -142,7 +109,8 @@
       <workItem from="1779178713522" duration="186000" />
       <workItem from="1779178931923" duration="11787000" />
       <workItem from="1779190882781" duration="11664000" />
-      <workItem from="1779202686264" duration="1894000" />
+      <workItem from="1779202686264" duration="2050000" />
+      <workItem from="1779255521920" duration="3317000" />
     </task>
     <task id="LOCAL-00001" summary="Commit message">
       <option name="closed" value="true" />
@@ -184,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779196487875</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit message">
+      <option name="closed" value="true" />
+      <created>1779204726246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779204726247</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

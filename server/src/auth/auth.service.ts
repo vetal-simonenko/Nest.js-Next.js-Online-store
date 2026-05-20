@@ -23,11 +23,19 @@ export class AuthService {
     private readonly configService: ConfigService,
   ) {}
 
+  private removePassword(user: any) {
+    const { password, ...safeUser } = user;
+    return safeUser;
+  }
+
   async login(dto: AuthDto) {
     const user = await this.validateUser(dto);
     const tokens = this.issueTokens(user.id);
 
-    return { user, ...tokens };
+    return {
+      user: this.removePassword(user),
+      ...tokens,
+    };
   }
 
   async register(dto: AuthDto) {
@@ -38,18 +46,27 @@ export class AuthService {
     const user = await this.userService.create(dto);
     const tokens = this.issueTokens(user.id);
 
-    return { user, ...tokens };
+    return {
+      user: this.removePassword(user),
+      ...tokens,
+    };
   }
 
   async getNewTokens(refreshToken: string) {
     const result = await this.jwt.verifyAsync(refreshToken);
 
-    if (!result) throw new UnauthorizedException('Refresh token not valide');
+    if (!result) throw new UnauthorizedException('Refresh token not valid');
 
     const user = await this.userService.getById(result.id);
-    const tokens = this.issueTokens(user!.id);
 
-    return { user, ...tokens };
+    if (!user) throw new UnauthorizedException('User not found');
+
+    const tokens = this.issueTokens(user.id);
+
+    return {
+      user: this.removePassword(user),
+      ...tokens,
+    };
   }
 
   issueTokens(userId: string) {
@@ -87,7 +104,6 @@ export class AuthService {
           name: req.user.name,
           picture: req.user.picture,
         },
-
         include: {
           stores: true,
           favorites: true,
@@ -99,7 +115,7 @@ export class AuthService {
     const tokens = this.issueTokens(user.id);
 
     return {
-      user,
+      user: this.removePassword(user),
       ...tokens,
     };
   }
