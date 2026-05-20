@@ -2,9 +2,33 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+import { ColorModule } from './color/color.module';
+import { CategoryModule } from './category/category.module';
+import { FileModule } from './file/file.module';
+import { StoreModule } from './store/store.module';
+import { OrderModule } from './order/order.module';
+import { StatisticsModule } from './statistics/statistics.module';
+import { ProductModule } from './product/product.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({}), AuthModule, UserModule],
+  imports: [
+    ConfigModule.forRoot({}),
+    AuthModule,
+    UserModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(process.cwd(), 'uploads'),
+      serveRoot: '/uploads',
+    }),
+    ColorModule,
+    CategoryModule,
+    FileModule,
+    StoreModule,
+    OrderModule,
+    StatisticsModule,
+    ProductModule,
+  ],
   controllers: [],
   providers: [],
 })
