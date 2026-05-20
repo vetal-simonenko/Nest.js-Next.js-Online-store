@@ -12,7 +12,6 @@ import {
 } from '@nestjs/common';
 import { ColorService } from './color.service';
 import { Auth } from '../auth/decorators/auth.decorators';
-import { CurrentUser } from '../user/decorators/user.decorator';
 import { ColorDto } from './dto/color.dto';
 
 @Controller('colors')
