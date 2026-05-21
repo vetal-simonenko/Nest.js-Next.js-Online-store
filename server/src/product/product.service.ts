@@ -11,7 +11,7 @@ export class ProductService {
       return this.getSearchTermFilter(searchTerm);
     }
 
-    const products = await this.prisma.product.findMany({
+    return this.prisma.product.findMany({
       orderBy: {
         createdAt: 'desc',
       },
@@ -21,8 +21,6 @@ export class ProductService {
         review: true,
       },
     });
-
-    return products;
   }
 
   private async getSearchTermFilter(searchTerm: string) {
