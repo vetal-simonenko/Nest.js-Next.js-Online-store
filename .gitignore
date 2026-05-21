@@ -1,9 +1,16 @@
-# compiled output
-/dist
-/node_modules
-/build
+# dependencies
+**/node_modules
 
-# Logs
+# next.js
+**/.next
+
+**/generated
+
+# compiled output
+**/dist
+**/build
+
+# logs
 logs
 *.log
 npm-debug.log*
@@ -15,45 +22,46 @@ lerna-debug.log*
 # OS
 .DS_Store
 
-# Tests
-/coverage
-/.nyc_output
+# tests
+coverage
+.nyc_output
 
 # IDEs and editors
-/.idea
 .idea
 .project
 .classpath
-.c9/
+.c9
 *.launch
-.settings/
+.settings
 *.sublime-workspace
 
-# IDE - VSCode
+# vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# dotenv environment variable files
+# env
 .env
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
 
-# temp directory
+# temp
 .temp
 .tmp
 
-# Runtime data
+# runtime
 pids
 *.pid
 *.seed
 *.pid.lock
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# reports
+report.*.*.*.*.json
 
-/generated/prisma
+# prisma
+generated/prisma
+/server/generated/
