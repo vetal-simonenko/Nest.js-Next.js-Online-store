@@ -65,3 +65,4 @@ report.*.*.*.*.json
 # prisma
 generated/prisma
 /server/generated/
+/server/uploads/
