@@ -26,20 +26,29 @@ export class ProductService {
   }
 
   private async getSearchTermFilter(searchTerm: string) {
-    return {
-      OR: [
-        {
-          title: {
-            contains: searchTerm,
-            mode: 'insensitive',
+    return this.prisma.product.findMany({
+      where: {
+        OR: [
+          {
+            title: {
+              contains: searchTerm,
+              mode: 'insensitive',
+            },
           },
-          description: {
-            contains: searchTerm,
-            mode: 'insensitive',
+          {
+            description: {
+              contains: searchTerm,
+              mode: 'insensitive',
+            },
           },
-        },
-      ],
-    };
+        ],
+      },
+      include: {
+        category: true,
+        color: true,
+        review: true,
+      },
+    });
   }
 
   async getByStoreId(storeId: string) {
@@ -83,8 +92,8 @@ export class ProductService {
       },
     });
 
-    if (!products) {
-      throw new NotFoundException('Product not found');
+    if (!products.length) {
+      throw new NotFoundException('Products not found');
     }
 
     return products;

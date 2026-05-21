@@ -1,4 +1,11 @@
-import { ArrayMinSize, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import {
+  ArrayMinSize,
+  IsArray,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+} from 'class-validator';
+import { Type } from 'class-transformer';
 
 export class ProductDto {
   @IsString({
@@ -17,6 +24,7 @@ export class ProductDto {
   })
   description: string;
 
+  @Type(() => Number)
   @IsNumber(
     {},
     {
@@ -28,9 +36,12 @@ export class ProductDto {
   })
   price: number;
 
+  @IsArray({
+    message: 'Images must be an array',
+  })
   @IsString({
     each: true,
-    message: 'Please provide at least one image',
+    message: 'Each image must be a string',
   })
   @ArrayMinSize(1, {
     message: 'At least one image is required',
