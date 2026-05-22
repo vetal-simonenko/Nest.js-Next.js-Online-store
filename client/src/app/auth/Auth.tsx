@@ -28,8 +28,8 @@ export function Auth() {
 				<Image
 					src='/images/auth.svg'
 					alt='TeaShop auth'
-					width={100}
-					height={100}
+					width={200}
+					height={200}
 					loading='eager'
 				/>
 			</div>

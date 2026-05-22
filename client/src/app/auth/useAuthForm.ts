@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { IAuthForm } from '@/shared/types/auth.interface';
 import { authService } from '@/services/auth/auth.service';
-import { PUBLIC_URL } from '@/config/url.config';
+import { DASHBOARD_URL } from '@/config/url.config';
 import toast from 'react-hot-toast';
 
 export function useAuthForm(isReg: boolean) {
@@ -22,10 +22,11 @@ export function useAuthForm(isReg: boolean) {
 		onSuccess() {
 			form.reset();
 			toast.success('Authentication successful');
-			router.replace(PUBLIC_URL.home());
+			router.replace(DASHBOARD_URL.home());
 		},
 
 		onError(error) {
+			console.log('onError', error);
 			if (error.message) {
 				toast.error(error.message);
 			} else {
