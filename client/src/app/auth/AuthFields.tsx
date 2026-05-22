@@ -39,6 +39,7 @@ export function AuthFields({
 									placeholder='John'
 									disabled={isPending}
 									{...field}
+									value={field.value ?? ''}
 								/>
 							</FormControl>
 							<FormMessage />
@@ -64,6 +65,7 @@ export function AuthFields({
 								placeholder='email@email.com'
 								disabled={isPending}
 								{...field}
+								value={field.value ?? ''}
 							/>
 						</FormControl>
 						<FormMessage />
@@ -89,6 +91,7 @@ export function AuthFields({
 								placeholder='Password'
 								disabled={isPending}
 								{...field}
+								value={field.value ?? ''}
 							/>
 						</FormControl>
 						<FormMessage />
