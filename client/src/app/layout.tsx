@@ -5,7 +5,6 @@ import { Providers } from '@/app/providers';
 
 import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants';
 
-import './globals.scss';
 import './tailwind.css';
 
 import { cn } from '@/lib/utils';

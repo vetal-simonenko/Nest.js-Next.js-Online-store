@@ -66,3 +66,4 @@ report.*.*.*.*.json
 generated/prisma
 /server/generated/
 /server/uploads/
+/client/.codemie/
