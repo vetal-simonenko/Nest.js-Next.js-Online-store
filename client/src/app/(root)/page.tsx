@@ -1,12 +1,13 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
-import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants'
+import { SITE_DESCRIPTION } from '@/constants/seo.constants';
+import { Home } from '@/app/(root)/Home';
 
 export const metadata: Metadata = {
-	title: 'Autorization',
+	title: 'Home Page',
 	description: SITE_DESCRIPTION
-}
+};
 
 export default function HomePage() {
-	return <div>HomePage</div>
+	return <Home />;
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { NO_INDEX_PAGE } from '@/constants/seo.constants';
-import { Dashboard } from '@/app/(root)/dashboard/DashboardPage';
+import { Dashboard } from '@/app/(root)/dashboard/Dashboard';
 
 export const metadata: Metadata = {
 	title: 'Privat cabinet',
