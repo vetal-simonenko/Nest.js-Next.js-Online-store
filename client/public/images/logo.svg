@@ -1,0 +1,32 @@
+<svg
+        width="160"
+        height="48"
+        viewBox="0 0 160 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+>
+    <circle cx="24" cy="24" r="20" fill="#16A34A" />
+
+    <path
+            d="M15 25C15 18.925 19.925 14 26 14H35V25C35 31.075 30.075 36 24 36H15V25Z"
+            fill="#DCFCE7"
+    />
+
+    <path
+            d="M22 16C28 18 31 23 31 30"
+            stroke="#16A34A"
+            stroke-width="3"
+            stroke-linecap="round"
+    />
+
+    <text
+            x="54"
+            y="31"
+            fill="#111827"
+            font-size="24"
+            font-weight="700"
+            font-family="Arial, sans-serif"
+    >
+        TeaShop
+    </text>
+</svg>

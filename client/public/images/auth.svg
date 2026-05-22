@@ -1,0 +1,45 @@
+<svg
+        width="500"
+        height="500"
+        viewBox="0 0 500 500"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+>
+    <rect width="500" height="500" rx="40" fill="#0F172A" />
+
+    <circle cx="250" cy="170" r="70" fill="#F59E0B" />
+
+    <path
+            d="M140 380C140 311.517 195.517 256 264 256H236C304.483 256 360 311.517 360 380V400H140V380Z"
+            fill="#F8FAFC"
+    />
+
+    <rect
+            x="185"
+            y="120"
+            width="130"
+            height="25"
+            rx="12.5"
+            fill="#F8FAFC"
+    />
+
+    <rect
+            x="205"
+            y="90"
+            width="90"
+            height="25"
+            rx="12.5"
+            fill="#38BDF8"
+    />
+
+    <text
+            x="250"
+            y="455"
+            text-anchor="middle"
+            fill="#CBD5E1"
+            font-size="28"
+            font-family="Arial"
+    >
+        TeaShop Auth
+    </text>
+</svg>
