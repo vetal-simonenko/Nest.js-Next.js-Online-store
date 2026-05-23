@@ -1,0 +1,5 @@
+@reference '../../../app/tailwind.css';
+
+.sidebar {
+	@apply h-full flex flex-col border-r overflow-y-auto pt-4 px-5 my-1;
+}

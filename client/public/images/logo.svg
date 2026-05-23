@@ -22,11 +22,11 @@
     <text
             x="54"
             y="31"
-            fill="#111827"
-            font-size="24"
+            fill="white"
+            font-size="20"
             font-weight="700"
             font-family="Arial, sans-serif"
     >
-        TeaShop
+        Nest Shop
     </text>
 </svg>
