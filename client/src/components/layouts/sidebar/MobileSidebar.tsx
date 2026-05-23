@@ -13,7 +13,7 @@ import { Sidebar } from './Sidebar';
 export function MobileSidebar() {
 	return (
 		<Sheet>
-			<SheetTrigger className='lg:hidden pr-4 hover:opacity-75 transition'>
+			<SheetTrigger className='lg:hidden mr-4 hover:opacity-75 transition'>
 				<Menu />
 			</SheetTrigger>
 

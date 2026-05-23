@@ -29,6 +29,7 @@ export function Header() {
 									alt={user.name}
 									width={42}
 									height={42}
+									loading='eager'
 								/>
 							</Link>
 						</>
