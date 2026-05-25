@@ -1,16 +1,25 @@
-import { MainStatisticsItem } from '@/app/store/[storeId]/statistics/main-statistics/MainStatisticsItem';
 import { useGetStatistics } from '@/hooks/queries/statistics/useGetStatistics';
-import styles from './MainStatistics.module.scss';
+import styles from './MiddleStatistics.module.scss';
+import { Overview } from './Overview';
+import { LastUsers } from './LastUsers';
 
 export function MiddleStatistics() {
-	const { main } = useGetStatistics();
+	const { middle } = useGetStatistics();
 
 	return (
-		<div className={styles.main}>
-			{main?.length ? (
-				main.map((item) => <MainStatisticsItem key={item.id} item={item} />)
+		<div className={styles.middle}>
+			{middle?.monthlySales || middle?.lastUsers ? (
+				<>
+					<div className={styles.overview}>
+						<Overview data={middle.monthlySales} />
+					</div>
+
+					<div className={styles.last_users}>
+						<LastUsers data={middle.lastUsers} />
+					</div>
+				</>
 			) : (
-				<div>No data for statistics</div>
+				<div className='w-full'>No data for statistics</div>
 			)}
 		</div>
 	);
