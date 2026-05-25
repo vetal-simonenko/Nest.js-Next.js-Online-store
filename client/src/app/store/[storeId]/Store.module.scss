@@ -1,5 +1,29 @@
 @reference '../../../app/tailwind.css';
 
 .wrapper {
-	@apply p-6;
+	@apply p-3;
+
+	> .header {
+		@apply flex items-center justify-between;
+
+		> .buttons {
+			@apply flex items-center gap-x-4;
+
+			svg {
+				@apply size-4 mr-2;
+			}
+		}
+	}
+
+	> .table {
+		@apply mt-3;
+	}
+
+	form {
+		@apply h-full space-y-6;
+
+		> .fields {
+			@apply mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3;
+		}
+	}
 }

@@ -1,7 +1,6 @@
 import { ICategory } from '@/shared/types/category.interface';
 import { IReview } from '@/shared/types/review.interface';
 import { IColor } from '@/shared/types/color.interface';
-import { IStore } from '@/shared/types/store.interface';
 
 export interface IProduct {
 	id: string;
@@ -12,7 +11,7 @@ export interface IProduct {
 	category: ICategory;
 	reviews: IReview[];
 	color: IColor;
-	store: IStore;
+	storeId: string;
 }
 
 export interface IProductInput extends Omit<
