@@ -1,0 +1,37 @@
+import { useParams, useRouter } from 'next/navigation';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { categoryService } from '@/services/category.service';
+import toast from 'react-hot-toast';
+import { STORE_URL } from '@/config/url.config';
+import { useMemo } from 'react';
+
+export const useDeleteCategory = () => {
+	const params = useParams<{ storeId: string; categoryId: string }>();
+	const router = useRouter();
+
+	const queryClient = useQueryClient();
+
+	const { mutate: deleteCategory, isPending: isLoadingDelete } = useMutation({
+		mutationKey: ['delete category'],
+		mutationFn: () => categoryService.delete(params.categoryId),
+
+		onSuccess() {
+			void queryClient.invalidateQueries({
+				queryKey: ['get categories for store dashboard']
+			});
+
+			toast.success('Category deleted');
+
+			router.push(STORE_URL.categories(params.storeId));
+		},
+
+		onError() {
+			toast.error('Error while deleting category');
+		}
+	});
+
+	return useMemo(
+		() => ({ deleteCategory, isLoadingDelete }),
+		[deleteCategory, isLoadingDelete]
+	);
+};
