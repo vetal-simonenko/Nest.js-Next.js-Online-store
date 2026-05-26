@@ -28,6 +28,7 @@ import {
 	SelectValue
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { ImageUpload } from '@/components/ui/form-elements/image-upload/imageUpload';
 
 interface ProductFormProps {
 	product?: IProduct;
@@ -90,6 +91,29 @@ export function ProductForm({ product, categories, colors }: ProductFormProps) {
 			</div>
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)}>
+					<FormField
+						control={form.control}
+						name='images'
+						rules={{
+							required: 'Images is required'
+						}}
+						render={({ field }) => (
+							<FormItem className='mt-4'>
+								<FormLabel>Images</FormLabel>
+
+								<FormControl>
+									<ImageUpload
+										isDisabled={isLoadingCreate || isLoadingCreate}
+										value={field.value}
+										onChange={field.onChange}
+									/>
+								</FormControl>
+
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+
 					<div className={styles.fields}>
 						<FormField
 							control={form.control}
