@@ -67,7 +67,11 @@ export class ProductService {
       include: {
         category: true,
         color: true,
-        review: true,
+        review: {
+          include: {
+            user: true,
+          },
+        },
       },
     });
 

@@ -1,21 +1,19 @@
 @reference '../../../../app/tailwind.css';
 
 .card {
-	@apply bg-white;
-
 	img {
-		@apply rounded-lg;
+		@apply rounded-lg bg-white;
 	}
 
 	> .title {
-		@apply mt-4 font-semibold text-gray-700 line-clamp-1;
+		@apply mt-4 font-semibold text-white line-clamp-1;
 	}
 
 	> .category {
-		@apply mt-1 text-sm text-gray-500;
+		@apply mt-1 text-sm text-white;
 	}
 
 	> .price {
-		@apply mt-1 font-medium text-sm text-gray-900;
+		@apply mt-1 font-medium text-sm text-white;
 	}
 }
