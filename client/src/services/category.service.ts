@@ -14,6 +14,15 @@ class CategoryService {
 		return data;
 	}
 
+	async getById(id: string) {
+		const { data } = await axiosWithAuth<ICategory>({
+			url: API_URL.categories(`/by-id/${id}`),
+			method: 'GET'
+		});
+
+		return data;
+	}
+
 	async getByStoreId(id: string) {
 		const { data } = await axiosWithAuth<ICategory[]>({
 			url: API_URL.categories(`/by-storeId/${id}`),
