@@ -98,7 +98,7 @@ export function ProductForm({ product, categories, colors }: ProductFormProps) {
 							required: 'Images is required'
 						}}
 						render={({ field }) => (
-							<FormItem className='mt-4'>
+							<FormItem className='mt-4 mb-4'>
 								<FormLabel>Images</FormLabel>
 
 								<FormControl>
