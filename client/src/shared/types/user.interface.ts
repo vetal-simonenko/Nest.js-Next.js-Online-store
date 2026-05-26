@@ -8,6 +8,6 @@ export interface IUser {
 	email: string;
 	picture: string;
 	favorites: IProduct[];
-	order: IOrder[];
+	orders: IOrder[];
 	stores: IStore[];
 }

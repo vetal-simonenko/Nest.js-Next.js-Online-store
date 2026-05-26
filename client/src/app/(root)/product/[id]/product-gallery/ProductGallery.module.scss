@@ -1,0 +1,13 @@
+@reference '../../../../tailwind.css';
+
+.image {
+	@apply rounded-lg;
+}
+
+.gallery {
+	@apply mt-6 flex gap-6;
+
+	> .item {
+		@apply overflow-hidden rounded-lg border duration-300;
+	}
+}
