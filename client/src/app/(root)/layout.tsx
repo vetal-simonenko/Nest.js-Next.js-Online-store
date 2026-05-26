@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
+import { MainLayout } from '@/components/layouts/main-layout/MainLayout';
 
 export default function Layout({ children }: PropsWithChildren) {
-	return <div>{children}</div>;
+	return <MainLayout>{children}</MainLayout>;
 }
