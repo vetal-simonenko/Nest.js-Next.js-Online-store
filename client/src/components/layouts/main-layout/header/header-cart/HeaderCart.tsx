@@ -36,9 +36,9 @@ export function HeaderCart() {
 			</SheetTrigger>
 
 			<SheetContent className={styles.cart}>
-				<SheetHeader>
+				<SheetHeader className='h-full'>
 					<DialogTitle className={'sr-only'}>Shopping Cart</DialogTitle>
-					<Heading title='Shopping Cart' className='text-xl' />
+					<Heading title='Shopping Cart' className='text-xl mb-3' />
 
 					<div className={styles.items}>
 						{items.length ? (
