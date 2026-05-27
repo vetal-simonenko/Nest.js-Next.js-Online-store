@@ -18,7 +18,7 @@ export class ProductService {
       include: {
         category: true,
         color: true,
-        review: true,
+        reviews: true,
       },
     });
   }
@@ -44,7 +44,7 @@ export class ProductService {
       include: {
         category: true,
         color: true,
-        review: true,
+        reviews: true,
       },
     });
   }
@@ -67,7 +67,7 @@ export class ProductService {
       include: {
         category: true,
         color: true,
-        review: {
+        reviews: {
           include: {
             user: true,
           },

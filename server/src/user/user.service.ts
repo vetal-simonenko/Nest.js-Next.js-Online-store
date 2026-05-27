@@ -46,7 +46,7 @@ export class UserService {
       },
       data: {
         favorites: {
-          [isExists ? 'disconnet' : 'connect']: {
+          [isExists ? 'disconnect' : 'connect']: {
             id: productId,
           },
         },

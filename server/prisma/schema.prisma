@@ -58,7 +58,7 @@ model Product {
   color       Color?      @relation(fields: [colorId], references: [id])
   store       Store?      @relation(fields: [storeId], references: [id])
   user        User?       @relation(fields: [userId], references: [id])
-  review      Review[]
+  reviews      Review[]
 
   @@map("product")
 }

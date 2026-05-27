@@ -19,6 +19,10 @@ export function ProductGallery({ product }: ProductGalleryProps) {
 				width={500}
 				height={500}
 				className={styles.image}
+				style={{
+					width: '100%',
+					height: 'auto'
+				}}
 			/>
 
 			<div className={styles.gallery}>
@@ -31,7 +35,16 @@ export function ProductGallery({ product }: ProductGalleryProps) {
 							index === currentIndex ? 'border-white' : 'border-transparent'
 						)}
 					>
-						<Image src={image} alt={product.title} width={100} height={100} />
+						<Image
+							src={image}
+							alt={product.title}
+							width={100}
+							height={100}
+							style={{
+								width: '100%',
+								height: 'auto'
+							}}
+						/>
 					</button>
 				))}
 			</div>
